@@ -15,7 +15,6 @@
 [comment]: # (!!! data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
 
 
-
 <!-- <div style="font-family:serif;">Goals</div> -->
 
 <!-- <hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" /> -->
@@ -200,18 +199,18 @@ $f, g$ = <em>adjacent vertices</em>
 
 
 
-<div style="font-family:serif;">Definitions</div>
+<!-- <div style="font-family:serif;">Definitions</div> -->
 
-<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
+<!-- <hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" /> -->
 
-![weighted graph](media/simple-graph-bipartite.png) <!-- .element: style="height:30vh; max-width:50vw; image-rendering: crisp-edges;" -->
+<!-- ![weighted graph](media/simple-graph-bipartite.png) <!-- .element: style="height:30vh; max-width:50vw; image-rendering: crisp-edges;" -->
 
-<em>Bipartite</em> graph
+<!-- <em>Bipartite</em> graph -->
 
-<small>vertices separable into two unconnected sets</small>
+<!-- <small>vertices separable into two unconnected sets</small> -->
 
 
-[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
+<!-- [comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1") -->
 
 
 
@@ -223,7 +222,7 @@ $f, g$ = <em>adjacent vertices</em>
 
 <em>Complete</em> graph<br />
 
-<small>$E = {{ V \cdot (V-1) } \over 2} = O(V^2)$</small>
+<small>$E = {V \choose 2} = {{ V \cdot (V-1) } \over 2} = O(V^2)$</small>
 
 
 [comment]: # (!!! data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
@@ -371,6 +370,7 @@ digraph graphname {
 
 * [GML](https://en.wikipedia.org/wiki/Graph_Modelling_Language) (graph modelling language)
 * [DGML](https://en.wikipedia.org/wiki/DGML) (directed graph markup language)
+* [RDF](https://www.w3.org/RDF/) (resource description framework)
 
 [comment]: # (!!! data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
 
@@ -415,17 +415,18 @@ digraph graphname {
 * [Cycle detection](https://en.wikipedia.org/wiki/Cycle_(graph_theory)#Cycle_detection) in directed graphs
 	- $\approx O(V + E)$
 
+* [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting)
+	- $\approx O(V + E)$
+
 </div>
 <div style="display:inline-block; width:35%;">
-<img src="media/simple-graph-cycle.png" alt="graph cycle" />
+<img src="media/simple-graph-cycle.png" alt="graph cycle" style="margin:0!important" />
+<img src="media/simple-graph-topological.png" alt="DAG topology" style="margin:0!important" />
 </div>
 <div style="margin-top:-60px;">
 
 * [Shortest path](https://en.wikipedia.org/wiki/Shortest_path_problem)
-	- directed vs. undirected
-	- weighted vs. unweighted
-	- [Dijkstra](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-priority_queue-stl/), [Johnson](https://www.geeksforgeeks.org/johnsons-algorithm-for-all-pairs-shortest-paths-implementation/), [Bellman-Ford](https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/) algorithms
-	- performance from $O(E \cdot V)$ to $O(V ^ 2)$ or better
+	- several algorithms, $O(E \cdot V)$ to $O(V ^ 2)$ or better
 
 </div>
 
@@ -433,18 +434,21 @@ digraph graphname {
 
 
 
-<div style="font-family:serif;">Algorithms</div>
+<!-- <div style="font-family:serif;">Algorithms</div> -->
 
-<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
+<!-- <hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" /> -->
 
-<div style="display:inline-block; width:65%; float:left;">
+<!-- <div style="display:inline-block; width:65%; float:left;">
+
+* [Shortest path](https://en.wikipedia.org/wiki/Shortest_path_problem)
+	- directed vs. undirected
+	- weighted vs. unweighted
+	- [Dijkstra](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-priority_queue-stl/), [Johnson](https://www.geeksforgeeks.org/johnsons-algorithm-for-all-pairs-shortest-paths-implementation/), [Bellman-Ford](https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/) algorithms
+	- performance from $O(E \cdot V)$ to $O(V ^ 2)$ or better
 
 * [Minimum Spanning Tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree)
 	- [Prim's algorithm](https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/) $\approx O(V^2)$
 	- [Kruskal's algorithm](https://www.geeksforgeeks.org/kruskals-algorithm-in-python/) $\approx O(E \cdot log V)$
-* [Topological Sorting](https://en.wikipedia.org/wiki/Topological_sorting)
-	- [implemented](https://www.geeksforgeeks.org/topological-sorting/) using DFS
-	- $\approx O(V + E)$
 
 </div>
 <div style="display:inline-block; width:35%;">
@@ -460,7 +464,7 @@ digraph graphname {
 * [Connected components](https://en.wikipedia.org/wiki/Component_(graph_theory)) (search)
 * Max-flow / min-cut ([Ford-Fulkerson](https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/) algorithm)
 
-[comment]: # (!!! data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
+[comment]: # (!!! data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1") -->
 
 
 
@@ -470,12 +474,63 @@ digraph graphname {
 
 
 
+<div style="font-family:serif;">Examples</div>
+
+<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
+
+![downtown Madison](media/downtown-madison-base.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+<small>Map directions?</small>
+
+[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
 
 
 
+<div style="font-family:serif;">Examples</div>
+
+<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
+
+![downtown Madison](media/downtown-madison-nodes.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+<small>Intersections as nodes...</small>
+
+[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
 
 
 
+<div style="font-family:serif;">Examples</div>
+
+<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
+
+![downtown Madison](media/downtown-madison-links.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+<small>Roads as links... (weighted by speed limit, lanes, traffic)</small>
+
+[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
+
+
+
+<div style="font-family:serif;">Examples</div>
+
+<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
+
+![downtown Madison](media/downtown-madison-path.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+<small>Path-finding!</small>
+
+[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
+
+
+
+<div style="font-family:serif;">Examples</div>
+
+<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
+
+![downtown Madison](media/downtown-madison-directions.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
+
+<small>(solved)</small>
+
+[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
 
 
 <div style="font-family:serif;">Examples</div>
@@ -515,68 +570,6 @@ digraph graphname {
 <img src="media/dbt-dag.png" alt="dbt DAG" />
 
 <small>dbt transformation DAG</small>
-
-[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
-
-
-
-
-
-<div style="font-family:serif;">Examples</div>
-
-<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
-
-![downtown Madison](media/downtown-madison-base.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
-
-<small>Map directions?</small>
-
-[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
-
-
-
-<div style="font-family:serif;">Examples</div>
-
-<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
-
-![downtown Madison](media/downtown-madison-nodes.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
-
-<small>Intersections as nodes...</small>
-
-[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
-
-
-
-<div style="font-family:serif;">Examples</div>
-
-<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
-
-![downtown Madison](media/downtown-madison-links.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
-
-<small>Roads as links... (weighted by speed limit, traffic)</small>
-
-[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
-
-
-
-<div style="font-family:serif;">Examples</div>
-
-<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
-
-![downtown Madison](media/downtown-madison-path.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
-
-<small>Path-finding!</small>
-
-[comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
-
-
-
-<div style="font-family:serif;">Examples</div>
-
-<hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
-
-![downtown Madison](media/downtown-madison-directions.png) <!-- .element: style="height:40vh; max-width:80vw; image-rendering: crisp-edges;" -->
-
-<small>(solved)</small>
 
 [comment]: # (||| data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
 
@@ -688,7 +681,7 @@ digraph graphname {
 
 
 
-<div style="font-family:serif;">Other Examples</div>
+<!-- <div style="font-family:serif;">Other Examples</div>
 
 <hr style="border-width:1px 0 0 0; border-color:rgba(0,0,0,0.1);" />
 
@@ -698,7 +691,7 @@ digraph graphname {
 * [Traveling Salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem#Exact_algorithms)
 * [Erdős number](https://en.wikipedia.org/wiki/Erd%C5%91s_number) and collaboration distance
 
-[comment]: # (!!! data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
+[comment]: # (!!! data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1") -->
 
 
 
@@ -803,7 +796,7 @@ group by 1,2
 
 <img src="media/classmates-graph.png" alt="a graph showing students taking classes" style="margin:0!important" />
 
-<small>Analog between graph search, matrix multiplication, and database table join!</small>
+<small>Analog between graph search, matrix multiplication, and database table join</small>
 
 [comment]: # (!!! data-auto-animate data-background-video="media/graph-bg.mp4", data-background-video-loop data-background-video-muted data-background-opacity="0.1")
 
@@ -910,7 +903,7 @@ group by 1,2
 
 ### Thank you! Questions?
 
-![media/slides-qr.png](media/slides-qr.png) <!-- .element: style="height:40vh; max-width:40vw; image-rendering: crisp-edges;" -->
+![media/slides-qr.png](media/slides-qr.png) <!-- .element: style="height:35vh; max-width:35vw; image-rendering: crisp-edges;" -->
 
 (slides)
 
